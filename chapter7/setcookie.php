@@ -1,7 +1,7 @@
 <?php
   //  Cookieに代入する文字列
   $cookie_data = 'クッキー';
-  $result = setcookie('sample', '', time() + 3600, '/');
+  $result = setcookie('sample', $cookie_data, time() + 3600, '/');
 
 ?>
 <!DOCTYPE html>

@@ -8,7 +8,7 @@
   <p>
   <?php
     require_once('h.php');
-
+    // var_dump($_COOKIE['sample']);
     if (isset($_COOKIE['sample'])) {
       echo 'Cookieの中身 : ' . h($_COOKIE['sample']);
     } else {

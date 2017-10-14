@@ -1,6 +1,6 @@
 <?php
   //  Cookieを削除する
-  $result = setcookie('sample', $cookie_data, time() - 3600, '/');
+  $result = setcookie('sample', '', time() - 3600, '/');
 
 ?>
 <!DOCTYPE html>
