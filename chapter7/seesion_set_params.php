@@ -7,7 +7,7 @@
 <html lang="ja">
 <head>
    <meta charset="utf-8">
-   <title>セッションCookieのパラメータを設定したい</title>
+   <title>セッションCookieについて</title>
 </head>
 <body>
  <div>
