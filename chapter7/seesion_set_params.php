@@ -12,12 +12,12 @@
 <body>
  <div>
    <?php
-      echo '<p>現在のセッションCookieの設定内容</p>';
+      echo '<p>- 現在のセッションCookieの設定内容</p>';
       echo '<pre>';
       print_r(session_get_cookie_params());
       echo '</pre>';
 
-      echo '<p>現在のセッションの設定内容</p>';
+      echo '<p>- 現在のセッションの設定内容</p>';
       echo '<pre>';
       $_SESSION['name'] = 'echizenya_yota';
       echo($_SESSION['name']);
@@ -26,8 +26,13 @@
       // セッションの初期化（削除）
       $_SESSION = array();
 
+      echo '<p>- 現在のセッションの設定内容（削除不可）</p>';
+      echo '<pre>';
       // セッションCookieの削除 → できない
       print_r(session_get_cookie_params());
+      echo '</pre>';
+
+      echo '<p>- 現在のセッションの設定内容（削除可）</p>';
       echo '<pre>';
       // セッションの削除 → できる
       echo($_SESSION['name']);
