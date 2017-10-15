@@ -3,7 +3,7 @@
   // ブラウザからの直接アクセスでないことを確認(JSONハイジャック対策にも有効)
   if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) ||
     $_SERVER['HTTP_X_REQUESTED_WITH'] !== 'XMLHttpRequest' ) {
-    die (json_encode(array('status' => "不正な呼び出しです")));
+    die (json_encode(array('status' => "不正な呼び出しです"))); // dieはexitと同じ
   }
 
   // データを準備
@@ -15,7 +15,7 @@
 
   // Content-typeをJSONに設定
   header("Content-Type: application/json; charset=UTF-8");
-  header("X-Content-Type-Options: nosniff");
+  header("X-Content-Type-Options: nosniff"); // XSS対策　テキストとしてと表示されるようになり、JavaScriptが実行されなくなる
 
    // 可能な限りのエスケープを行う
    echo json_encode(
