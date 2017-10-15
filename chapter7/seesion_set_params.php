@@ -28,13 +28,11 @@
 
       echo '<p>- 現在のセッションの設定内容（削除不可）</p>';
       echo '<pre>';
-      // セッションCookieの削除 → できない
       print_r(session_get_cookie_params());
       echo '</pre>';
 
       echo '<p>- 現在のセッションの設定内容（削除可）</p>';
       echo '<pre>';
-      // セッションの削除 → できる
       echo($_SESSION['name']);
       echo '</pre>';
    ?>
