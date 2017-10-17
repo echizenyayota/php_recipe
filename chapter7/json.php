@@ -2,10 +2,10 @@
   // jQueryなどの主要ライブラリからのアクセスである
   // ブラウザからの直接アクセスでないことを確認(JSONハイジャック対策にも有効)
   // var_dump($_SERVER['HTTP_X_REQUESTED_WITH']);
-  if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) ||
-    $_SERVER['HTTP_X_REQUESTED_WITH'] !== 'XMLHttpRequest' ) {
-    die (json_encode(array('status' => "不正な呼び出し"))); // dieはexitと同じ
-  }
+  // if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) ||
+  //   $_SERVER['HTTP_X_REQUESTED_WITH'] !== 'XMLHttpRequest' ) {
+  //   die (json_encode(array('status' => "不正な呼び出し"))); // dieはexitと同じ
+  // }
 
   // データを準備
   $value = array(

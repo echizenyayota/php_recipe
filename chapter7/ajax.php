@@ -13,8 +13,8 @@
               var td_item = $("<td>").text(data[i].item);
               tr.append(td_item);
               var td_price = $("<td>").text(data[i].price);
-              tr.append(td_item);
-              var td_item = $("<td>").text(data[i].orders);
+              tr.append(td_price);
+              var td_orders = $("<td>").text(data[i].orders);
               tr.append(td_orders);
 
               $('#listbox').append(tr);
