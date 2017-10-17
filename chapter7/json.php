@@ -14,9 +14,6 @@
     3 => array('item' => 'ニンニクチャーハン', 'price' => 630, 'orders' => 87)
   );
 
-  // var_dump($value);
-  // exit;
-
   // Content-typeをJSONに設定
   header("Content-Type: application/json; charset=UTF-8");
   header("X-Content-Type-Options: nosniff"); // XSS対策　テキストとしてと表示されるようになり、JavaScriptが実行されなくなる
