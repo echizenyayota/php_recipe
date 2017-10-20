@@ -1,7 +1,6 @@
 <?php
   // jQueryなどの主要ライブラリからのアクセスである
   // ブラウザからの直接アクセスでないことを確認(JSONハイジャック対策にも有効)
-  // var_dump($_SERVER['HTTP_X_REQUESTED_WITH']);
   if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) ||
     $_SERVER['HTTP_X_REQUESTED_WITH'] !== 'XMLHttpRequest' ) {
     die (json_encode(array('status' => "不正な呼び出し"))); // dieはexitと同じ
@@ -9,9 +8,9 @@
 
   // データを準備
   $value = array(
-    1 => array('item' => '台湾ラーメン', 'price' => 580, 'orders' => 113),
-    2 => array('item' => '台湾ラーメン(アメリカン)', 'price' => 580, 'orders' => 72),
-    3 => array('item' => 'ニンニクチャーハン', 'price' => 630, 'orders' => 87)
+    1 => array('item' => 'ラーメン', 'price' => 780, 'orders' => 113),
+    2 => array('item' => 'チャーハン', 'price' => 600, 'orders' => 72),
+    3 => array('item' => 'ライス', 'price' => 1500, 'orders' => 87)
   );
 
   // Content-typeをJSONに設定
